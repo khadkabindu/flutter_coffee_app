@@ -11,13 +11,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   TabController tabController;
+  int _selectedIndex = 0;
 
-
-
-
-
-
-
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   void initState() {
@@ -135,11 +135,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                           text: "Doppio",
                         ),
                       ]),
-                  // mathi ko ho yoo haii
-
                   CoffeeCard(),
-
-
                   SizedBox(
                     height: 5,
                   ),
@@ -153,18 +149,27 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   SizedBox(
                     height: 20,
                   ),
-
                 ],
               ),
             ),
           ),
-
-
-
-
           SpecialCoffeeCard(),
         ],
       )),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        selectedItemColor: Color(0xffd17842),
+        unselectedItemColor: Color(0xff4d4f52),
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: ""),
+        ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+      ),
     );
   }
 }

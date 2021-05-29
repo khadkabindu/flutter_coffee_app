@@ -22,7 +22,6 @@ class CoffeeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 4,
       child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
