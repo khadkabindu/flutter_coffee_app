@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_coffeeapp/coffee_card.dart';
 import 'package:flutter_coffeeapp/special_coffee_card.dart';
 
+import 'coffee_details_page.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key key}) : super(key: key);
 
