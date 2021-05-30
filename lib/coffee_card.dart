@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CoffeeCard extends StatelessWidget {
-
   List<String> images = [
     "images/tyler-nix-nwdtkFzDfPY-unsplash.jpg",
     "images/newcappuccino.jpg",
@@ -18,10 +17,9 @@ class CoffeeCard extends StatelessWidget {
 
   List<double> price = [4.29, 3.21, 6.46, 2.90];
 
-
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Flexible(
       child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
@@ -41,8 +39,7 @@ class CoffeeCard extends StatelessWidget {
                         height: 135,
                         width: 140,
                         decoration: BoxDecoration(
-                            borderRadius:
-                            BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
                                 image: AssetImage(images[index]),
                                 fit: BoxFit.cover)),
@@ -50,13 +47,11 @@ class CoffeeCard extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.all(15),
                         child: Column(
-                          crossAxisAlignment:
-                          CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               "Cappuccino",
-                              style:
-                              TextStyle(color: Colors.white),
+                              style: TextStyle(color: Colors.white),
                             ),
                             SizedBox(
                               height: 3,
@@ -64,25 +59,21 @@ class CoffeeCard extends StatelessWidget {
                             Text(
                               ingredients[index],
                               style: TextStyle(
-                                  color: Color(0xff919293),
-                                  fontSize: 11),
+                                  color: Color(0xff919293), fontSize: 11),
                             ),
                             SizedBox(
                               height: 5,
                             ),
                             Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Row(
                                   children: [
                                     Text(
                                       r'$ ',
                                       style: TextStyle(
-                                          color:
-                                          Color(0xffd17842),
-                                          fontWeight:
-                                          FontWeight.bold,
+                                          color: Color(0xffd17842),
+                                          fontWeight: FontWeight.bold,
                                           fontSize: 20),
                                     ),
                                     Text(
@@ -90,8 +81,7 @@ class CoffeeCard extends StatelessWidget {
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 20,
-                                          fontWeight:
-                                          FontWeight.bold),
+                                          fontWeight: FontWeight.bold),
                                     )
                                   ],
                                 ),
@@ -101,8 +91,7 @@ class CoffeeCard extends StatelessWidget {
                                     decoration: BoxDecoration(
                                         color: Color(0xffd17842),
                                         borderRadius:
-                                        BorderRadius.circular(
-                                            10)),
+                                            BorderRadius.circular(10)),
                                     child: Icon(
                                       Icons.add,
                                       color: Colors.white,
