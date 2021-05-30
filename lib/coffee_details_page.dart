@@ -11,7 +11,7 @@ class CoffeeDetailsPage extends StatelessWidget {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(8),
+          padding: EdgeInsets.all(10),
           child: Column(
             children: [
               Stack(
@@ -166,11 +166,17 @@ class CoffeeDetailsPage extends StatelessWidget {
                               Container(
                                 height: 37,
                                 width: 120,
-                                child: Center(child: Text("Medium Roasted", style: TextStyle(color: Color(0xff919296), fontSize: 11),)),
+                                child: Center(
+                                    child: Text(
+                                  "Medium Roasted",
+                                  style: TextStyle(
+                                      color: Color(0xff919296),
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold),
+                                )),
                                 decoration: BoxDecoration(
                                     color: Color(0xff101419),
                                     borderRadius: BorderRadius.circular(8)),
-
                               ),
                             ],
                           )
@@ -179,7 +185,98 @@ class CoffeeDetailsPage extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Description",
+                      style: TextStyle(color: Color(0xff919296)),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "A cappuccino is a coffee-based drink made primarily from espresso and milk",
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      "Size",
+                      style: TextStyle(
+                        color: Color(0xff919296),
+                        fontSize: 15,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          height: 37,
+                          width: 110,
+                          child: Center(
+                              child: Text(
+                            "S",
+                            style: TextStyle(
+                                color: Color(0xff919296),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Color(0xffd17842))),
+                        ),
+                        SizedBox(
+                          width: 11,
+                        ),
+                        Container(
+                          height: 37,
+                          width: 110,
+                          child: Center(
+                              child: Text(
+                            "M",
+                            style: TextStyle(
+                                color: Color(0xff919296),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          decoration: BoxDecoration(
+                              color: Color(0xff101419),
+                              borderRadius: BorderRadius.circular(8)),
+                        ),
+                        SizedBox(
+                          width: 11,
+                        ),
+                        Container(
+                          height: 37,
+                          width: 110,
+                          child: Center(
+                              child: Text(
+                            "L",
+                            style: TextStyle(
+                                color: Color(0xff919296),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          decoration: BoxDecoration(
+                              color: Color(0xff101419),
+                              borderRadius: BorderRadius.circular(8)),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
