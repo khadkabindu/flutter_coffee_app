@@ -17,8 +17,11 @@ class CoffeeDetailsPage extends StatelessWidget {
               Stack(
                 children: [
                   Container(
-                    height: 450,
-                    width: MediaQuery.of(context).size.width,
+                    height: 440,
+                    width: MediaQuery
+                        .of(context)
+                        .size
+                        .width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
                         image: DecorationImage(
@@ -27,7 +30,7 @@ class CoffeeDetailsPage extends StatelessWidget {
                             fit: BoxFit.cover)),
                   ),
                   Positioned(
-                    top: 330,
+                    top: 320,
                     child: BlurryContainer(
                       padding: EdgeInsets.all(20),
                       height: 140,
@@ -100,9 +103,9 @@ class CoffeeDetailsPage extends StatelessWidget {
                                     width: 42,
                                     child: Column(
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                      CrossAxisAlignment.center,
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      MainAxisAlignment.center,
                                       children: [
                                         SvgPicture.asset(
                                           "images/coffee-beans.svg",
@@ -133,9 +136,9 @@ class CoffeeDetailsPage extends StatelessWidget {
                                     width: 42,
                                     child: Column(
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                      CrossAxisAlignment.center,
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      MainAxisAlignment.center,
                                       children: [
                                         SvgPicture.asset(
                                           "images/water-drop.svg",
@@ -168,12 +171,12 @@ class CoffeeDetailsPage extends StatelessWidget {
                                 width: 120,
                                 child: Center(
                                     child: Text(
-                                  "Medium Roasted",
-                                  style: TextStyle(
-                                      color: Color(0xff919296),
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold),
-                                )),
+                                      "Medium Roasted",
+                                      style: TextStyle(
+                                          color: Color(0xff919296),
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold),
+                                    )),
                                 decoration: BoxDecoration(
                                     color: Color(0xff101419),
                                     borderRadius: BorderRadius.circular(8)),
@@ -196,14 +199,16 @@ class CoffeeDetailsPage extends StatelessWidget {
                   children: [
                     Text(
                       "Description",
-                      style: TextStyle(color: Color(0xff919296)),
+                      style: TextStyle(
+                          color: Color(0xff919296),
+                          fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
                       height: 8,
                     ),
                     Text(
-                      "A cappuccino is a coffee-based drink made primarily from espresso and milk",
-                      style: TextStyle(color: Colors.white, fontSize: 15),
+                      "A cappuccino is a coffee-based drink made primarily from espresso and milk.",
+                      style: TextStyle(color: Color(0xff919296), fontSize: 15),
                     ),
                     SizedBox(
                       height: 15,
@@ -211,9 +216,9 @@ class CoffeeDetailsPage extends StatelessWidget {
                     Text(
                       "Size",
                       style: TextStyle(
-                        color: Color(0xff919296),
-                        fontSize: 15,
-                      ),
+                          color: Color(0xff919296),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
                       height: 15,
@@ -225,12 +230,12 @@ class CoffeeDetailsPage extends StatelessWidget {
                           width: 110,
                           child: Center(
                               child: Text(
-                            "S",
-                            style: TextStyle(
-                                color: Color(0xff919296),
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
-                          )),
+                                "S",
+                                style: TextStyle(
+                                    color: Color(0xff919296),
+                                    fontSize: 18,
+                                    ),
+                              )),
                           decoration: BoxDecoration(
                               color: Colors.black,
                               borderRadius: BorderRadius.circular(10),
@@ -244,12 +249,12 @@ class CoffeeDetailsPage extends StatelessWidget {
                           width: 110,
                           child: Center(
                               child: Text(
-                            "M",
-                            style: TextStyle(
-                                color: Color(0xff919296),
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
-                          )),
+                                "M",
+                                style: TextStyle(
+                                    color: Color(0xff919296),
+                                    fontSize: 18,
+                                    ),
+                              )),
                           decoration: BoxDecoration(
                               color: Color(0xff101419),
                               borderRadius: BorderRadius.circular(8)),
@@ -262,16 +267,69 @@ class CoffeeDetailsPage extends StatelessWidget {
                           width: 110,
                           child: Center(
                               child: Text(
-                            "L",
-                            style: TextStyle(
-                                color: Color(0xff919296),
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
-                          )),
+                                "L",
+                                style: TextStyle(
+                                    color: Color(0xff919296),
+                                    fontSize: 18,
+                                    ),
+                              )),
                           decoration: BoxDecoration(
                               color: Color(0xff101419),
                               borderRadius: BorderRadius.circular(8)),
                         ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 27,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Price",
+                              style: TextStyle(
+                                  color: Color(0xff919296),
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  r'$',
+                                  style: TextStyle(
+                                      color: Color(0xffd17842), fontSize: 21),
+                                ),
+                                Text(
+                                  " 4.20",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 21),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                        // ignore: deprecated_member_use
+                        ButtonTheme(
+                          minWidth: 200,
+                          height: 50,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            onPressed: () {},
+                            color: Color(0xffd17842),
+                            child: Text(
+                              "Buy Now",
+                              style: TextStyle(color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            ),
+                          ),
+                        )
                       ],
                     )
                   ],

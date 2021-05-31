@@ -55,14 +55,13 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Icon(
-                              Icons.workspaces_filled,
+                              Icons.menu,
                               color: Color(0xff4d4f52),
                             )),
                         Container(
                           height: 43,
                           width: 40,
                           decoration: BoxDecoration(
-                            color: Color(0xff1b2027),
                             borderRadius: BorderRadius.circular(15),
                             image: DecorationImage(
                               fit: BoxFit.cover,

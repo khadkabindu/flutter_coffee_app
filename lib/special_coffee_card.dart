@@ -8,6 +8,18 @@ class SpecialCoffeeCard extends StatelessWidget {
     "images/lattee.jpg"
   ];
 
+  List<String> coffeeName = [
+    "Caramel Macchiato ",
+    "Turkish Coffee",
+    "Cafe Cubanoi"
+  ];
+
+  List<String> ingredients = [
+    "Ice, Cramel Sauce, Espresso",
+    "Turkish coffee, Sugar",
+    "Ground Coffee, Water"
+  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +56,7 @@ class SpecialCoffeeCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "5 Coffee Beans You\nMust Try!",
+                      coffeeName[index],
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.white,
@@ -54,12 +66,12 @@ class SpecialCoffeeCard extends StatelessWidget {
                       height: 6,
                     ),
                     Text(
-                      "With Oat Milk",
+                      ingredients[index],
                       style: TextStyle(
                           color: Color(0xff919293), fontSize: 12),
                     ),
                     SizedBox(
-                      height: 3,
+                      height: 8,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

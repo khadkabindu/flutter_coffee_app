@@ -12,9 +12,9 @@ class CoffeeCard extends StatelessWidget {
 
   List<String> ingredients = [
     "With Oat Milk",
-    "With Oat Milk",
-    "With Oat Milk",
-    "With Oat Milk"
+    "With Cinnamon Powder",
+    "With Chocolate Powder",
+    "With Caramel Drizzle"
   ];
 
   List<double> price = [4.29, 3.21, 6.46, 2.90];
