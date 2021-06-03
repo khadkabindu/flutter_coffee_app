@@ -20,6 +20,8 @@ class SpecialCoffeeCard extends StatelessWidget {
     "Ground Coffee, Water"
   ];
 
+  List<String> price = ["5.00", "7.50", "9.00"];
+
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +88,7 @@ class SpecialCoffeeCard extends StatelessWidget {
                                   fontSize: 20),
                             ),
                             Text(
-                              "5.60",
+                              "${price[index]}",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
